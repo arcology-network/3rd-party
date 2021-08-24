@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/HPISTechnologies/3rd-party/tm/go-amino"
+	"github.com/arcology/3rd-party/tm/go-amino"
 	"github.com/stretchr/testify/assert"
 )
 

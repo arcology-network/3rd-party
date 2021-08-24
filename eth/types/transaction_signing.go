@@ -21,10 +21,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common"
-	"github.com/HPISTechnologies/3rd-party/eth/crypto"
-	cryptov2 "github.com/HPISTechnologies/3rd-party/eth/crypto/v2"
-	"github.com/HPISTechnologies/3rd-party/eth/params"
+	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology/3rd-party/eth/crypto"
+	"github.com/arcology/3rd-party/eth/params"
 )
 
 var (
@@ -147,7 +146,7 @@ func (s EIP155Signer) Sender(tx *Transaction) (common.Address, error) {
 		return HomesteadSigner{}.Sender(tx)
 	}
 
-	//fmt.Printf("github.com/HPISTechnologies/eth-lib/core/types/transaction_signing.go -->>Sender  tx.ChainId()=%v,s.chainId=%v\n", tx.ChainId(), s.chainId)
+	//fmt.Printf("github.com/arcology/eth-lib/core/types/transaction_signing.go -->>Sender  tx.ChainId()=%v,s.chainId=%v\n", tx.ChainId(), s.chainId)
 	if tx.ChainId().Cmp(s.chainId) != 0 {
 		return common.Address{}, ErrInvalidChainId
 	}
@@ -254,7 +253,7 @@ func recoverPlain(sighash common.Hash, R, S, Vb *big.Int, homestead bool) (commo
 	copy(sig[64-len(s):64], s)
 	sig[64] = V
 	// recover the public key from the signature
-	pub, err := cryptov2.Ecrecover(sighash[:], sig)
+	pub, err := crypto.Ecrecover(sighash[:], sig)
 	if err != nil {
 		return common.Address{}, err
 	}

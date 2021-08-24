@@ -3,7 +3,7 @@ package words
 import (
 	"testing"
 
-	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
+	cmn "github.com/arcology/3rd-party/tm/common"
 )
 
 func warmupCodec(bank string) *WordCodec {

@@ -3,8 +3,8 @@ package crypto
 import (
 	"testing"
 
-	"github.com/HPISTechnologies/3rd-party/tm/ed25519"
-	amino "github.com/HPISTechnologies/3rd-party/tm/go-amino"
+	"github.com/arcology/3rd-party/tm/ed25519"
+	amino "github.com/arcology/3rd-party/tm/go-amino"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

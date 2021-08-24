@@ -101,7 +101,7 @@ BUG FIXES:
 
 FEATURES:
 
-- `github.com/HPISTechnologies/Monaco/go-data` -> `github.com/HPISTechnologies/Monaco/go-wire/data`
+- `github.com/arcology/Monaco/go-data` -> `github.com/arcology/Monaco/go-wire/data`
 
 IMPROVEMENTS:
 

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	. "github.com/HPISTechnologies/3rd-party/tm/common"
+	. "github.com/arcology/3rd-party/tm/common"
 )
 
 func SignatureFromBytes(pubKeyBytes []byte) (pubKey Signature, err error) {

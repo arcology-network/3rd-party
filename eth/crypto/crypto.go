@@ -28,10 +28,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common"
-	"github.com/HPISTechnologies/3rd-party/eth/common/math"
-	"github.com/HPISTechnologies/3rd-party/eth/crypto/sha3"
-	"github.com/HPISTechnologies/3rd-party/eth/rlp"
+	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology/3rd-party/eth/common/math"
+	"github.com/arcology/3rd-party/eth/crypto/sha3"
+	"github.com/arcology/3rd-party/eth/rlp"
 )
 
 var (

@@ -20,6 +20,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"database/sql/driver"
+	"encoding/binary"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
@@ -29,9 +30,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common/hexutil"
-	"github.com/HPISTechnologies/3rd-party/eth/crypto/sha3"
-	"github.com/HPISTechnologies/3rd-party/eth/rlp"
+	"github.com/arcology/3rd-party/eth/common/hexutil"
+	"github.com/arcology/3rd-party/eth/crypto/sha3"
+	"github.com/arcology/3rd-party/eth/rlp"
 )
 
 // Lengths of hashes and addresses in bytes.
@@ -351,6 +352,23 @@ func (hash Hash) Size() uint32 {
 	return uint32(HashLength)
 }
 
+func (hash Hash) Encode() []byte {
+	return hash[:]
+}
+
+func (hash Hash) Decode(data []byte) Hash {
+	copy(hash[:], data)
+	return hash
+}
+
+func (hash Hash) Checksum() []byte {
+	return hash.Encode()
+}
+
+func (hash Hash) ToUint32() uint32 {
+	return binary.BigEndian.Uint32(hash[0:4])
+}
+
 type Hashes []Hash
 
 func (hashes Hashes) Intersected(lft []Hash, rgt []Hash) bool {
@@ -465,4 +483,23 @@ func (as Addresses) Less(i, j int) bool {
 //Swap()
 func (as Addresses) Swap(i, j int) {
 	as[i], as[j] = as[j], as[i]
+}
+
+func (addresses Addresses) Encode() []byte {
+	return Addresses(addresses).Flatten()
+}
+
+func (addresses Addresses) Decode(data []byte) []Address {
+	addresses = make([]Address, len(data)/AddressLength)
+	for i := 0; i < len(addresses); i++ {
+		copy(addresses[i][:], data[i*AddressLength:(i+1)*AddressLength])
+	}
+	return addresses
+}
+func (addresses Addresses) Flatten() []byte {
+	buffer := make([]byte, len(addresses)*AddressLength)
+	for i := 0; i < len(addresses); i++ {
+		copy(buffer[i*AddressLength:(i+1)*AddressLength], addresses[i][:])
+	}
+	return buffer
 }

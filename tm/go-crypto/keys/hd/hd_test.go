@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/tyler-smith/go-bip39"
 
-	"github.com/HPISTechnologies/3rd-party/tm/go-crypto"
+	"github.com/arcology/3rd-party/tm/go-crypto"
 )
 
 type addrData struct {

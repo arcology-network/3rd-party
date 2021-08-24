@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	ethCommon "github.com/HPISTechnologies/3rd-party/eth/common"
-	ethRlp "github.com/HPISTechnologies/3rd-party/eth/rlp"
+	ethCommon "github.com/arcology/3rd-party/eth/common"
+	ethRlp "github.com/arcology/3rd-party/eth/rlp"
 )
 
 func BenchmarkTransactionAsMessage(b *testing.B) {
@@ -13,13 +13,15 @@ func BenchmarkTransactionAsMessage(b *testing.B) {
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		var tx Transaction
-		if err := ethRlp.DecodeBytes(rawTx, &tx); err != nil {
-			b.Error(err)
-		}
-		ethCommon.RlpHash(&tx)
-		if _, err := tx.AsMessage(NewEIP155Signer(new(big.Int).SetInt64(1))); err != nil {
-			b.Error(err)
+		for j := 0; j < 100000; j++ {
+			var tx Transaction
+			if err := ethRlp.DecodeBytes(rawTx, &tx); err != nil {
+				b.Error(err)
+			}
+			ethCommon.RlpHash(&tx)
+			if _, err := tx.AsMessage(NewEIP155Signer(new(big.Int).SetInt64(1))); err != nil {
+				b.Error(err)
+			}
 		}
 	}
 }
