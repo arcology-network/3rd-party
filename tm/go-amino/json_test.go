@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	amino "github.com/HPISTechnologies/3rd-party/tm/go-amino"
+	amino "github.com/arcology/3rd-party/tm/go-amino"
 	"github.com/stretchr/testify/assert"
 )
 

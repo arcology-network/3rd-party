@@ -19,9 +19,9 @@ package types
 import (
 	"io"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common"
-	"github.com/HPISTechnologies/3rd-party/eth/common/hexutil"
-	"github.com/HPISTechnologies/3rd-party/eth/rlp"
+	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology/3rd-party/eth/common/hexutil"
+	"github.com/arcology/3rd-party/eth/rlp"
 )
 
 //go:generate gencodec -type Log -field-override logMarshaling -out gen_log_json.go

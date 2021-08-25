@@ -5,7 +5,7 @@ import (
 
 	asrt "github.com/stretchr/testify/assert"
 
-	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
+	cmn "github.com/arcology/3rd-party/tm/common"
 )
 
 var codecs = []ECC{

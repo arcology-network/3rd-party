@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/HPISTechnologies/3rd-party/tm/go-amino/tests"
+	"github.com/arcology/3rd-party/tm/go-amino/tests"
 )
 
 //-------------------------------------

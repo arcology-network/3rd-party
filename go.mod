@@ -1,4 +1,4 @@
-module github.com/HPISTechnologies/3rd-party
+module github.com/arcology/3rd-party
 
 go 1.13
 

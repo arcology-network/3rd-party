@@ -11,7 +11,7 @@ logic objects and persistence objects.
 **CAVEAT:** we're still building out the ecosystem, which is currently most
 developed in Go.  But Amino is not just for Go — if you'd like to
 contribute by creating supporting libraries in various languages from scratch,
-or by adapting existing Protobuf3 libraries, please [open an issue on GitHub](https://github.com/HPISTechnologies/Monaco/go-amino/issues)!
+or by adapting existing Protobuf3 libraries, please [open an issue on GitHub](https://github.com/arcology/Monaco/go-amino/issues)!
 
 # Why Amino?
 
@@ -28,7 +28,7 @@ Amino wants to be Protobuf4. The bulk of this spec will
 explain how Amino differs from Protobuf3. Here, we will illustrate two key
 selling points for Amino.
 
-* In Protobuf3, [embedded message are `varint` byte-length prefixed]((https://github.com/HPISTechnologies/Monaco/go-amino/wiki/aminoscan));
+* In Protobuf3, [embedded message are `varint` byte-length prefixed]((https://github.com/arcology/Monaco/go-amino/wiki/aminoscan));
   However, this makes the binary encoding naturally more inefficient, as bytes cannot
   simply be written to a memory array (buffer) in sequence without allocating a
   new buffer for each embedded message. Amino is encoded in such a way that the
@@ -467,6 +467,6 @@ bytes.  As in Protobuf, a nil struct field value is not encoded at all.
 
 # Amino in other langauges
 
-[Open an Issue on GitHub](https://github.com/HPISTechnologies/Monaco/go-amino/issues), as we
+[Open an Issue on GitHub](https://github.com/arcology/Monaco/go-amino/issues), as we
 will pay out bounties for implementations in other languages.  In Golang, we are
 are primarily interested in codec generators.

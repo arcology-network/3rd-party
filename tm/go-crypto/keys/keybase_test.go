@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dbm "github.com/HPISTechnologies/3rd-party/tm/db"
+	dbm "github.com/arcology/3rd-party/tm/db"
 
-	"github.com/HPISTechnologies/3rd-party/tm/go-crypto"
-	"github.com/HPISTechnologies/3rd-party/tm/go-crypto/keys"
-	"github.com/HPISTechnologies/3rd-party/tm/go-crypto/keys/words"
+	"github.com/arcology/3rd-party/tm/go-crypto"
+	"github.com/arcology/3rd-party/tm/go-crypto/keys"
+	"github.com/arcology/3rd-party/tm/go-crypto/keys/words"
 )
 
 // TestKeyManagement makes sure we can manipulate these keys well

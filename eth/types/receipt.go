@@ -22,9 +22,9 @@ import (
 	"io"
 	"unsafe"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common"
-	"github.com/HPISTechnologies/3rd-party/eth/common/hexutil"
-	"github.com/HPISTechnologies/3rd-party/eth/rlp"
+	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology/3rd-party/eth/common/hexutil"
+	"github.com/arcology/3rd-party/eth/rlp"
 )
 
 //go:generate gencodec -type Receipt -field-override receiptMarshaling -out gen_receipt_json.go

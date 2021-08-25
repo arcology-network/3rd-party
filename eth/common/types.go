@@ -30,9 +30,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/HPISTechnologies/3rd-party/eth/common/hexutil"
-	"github.com/HPISTechnologies/3rd-party/eth/crypto/sha3"
-	"github.com/HPISTechnologies/3rd-party/eth/rlp"
+	"github.com/arcology/3rd-party/eth/common/hexutil"
+	"github.com/arcology/3rd-party/eth/crypto/sha3"
+	"github.com/arcology/3rd-party/eth/rlp"
 )
 
 // Lengths of hashes and addresses in bytes.

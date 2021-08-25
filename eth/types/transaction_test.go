@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	ethCommon "github.com/HPISTechnologies/3rd-party/eth/common"
-	ethRlp "github.com/HPISTechnologies/3rd-party/eth/rlp"
+	ethCommon "github.com/arcology/3rd-party/eth/common"
+	ethRlp "github.com/arcology/3rd-party/eth/rlp"
 )
 
 func BenchmarkTransactionAsMessage(b *testing.B) {
