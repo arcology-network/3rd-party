@@ -9,7 +9,7 @@ import (
 	"sort"
 	"sync"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
 	"github.com/pkg/errors"
 )
 

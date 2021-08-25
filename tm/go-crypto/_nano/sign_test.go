@@ -8,7 +8,7 @@ import (
 	asrt "github.com/stretchr/testify/assert"
 	rqr "github.com/stretchr/testify/require"
 
-	crypto "github.com/arcology/3rd-party/tm/go-crypto"
+	crypto "github.com/HPISTechnologies/3rd-party/tm/go-crypto"
 )
 
 func parseEdKey(data []byte) (key crypto.PubKey, err error) {

@@ -6,7 +6,7 @@ import (
 	asrt "github.com/stretchr/testify/assert"
 	rqr "github.com/stretchr/testify/require"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
 )
 
 func TestLengthCalc(t *testing.T) {

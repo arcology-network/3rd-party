@@ -7,7 +7,7 @@ package extra25519
 import (
 	"crypto/sha512"
 
-	"github.com/arcology/3rd-party/tm/ed25519/edwards25519"
+	"github.com/HPISTechnologies/3rd-party/tm/ed25519/edwards25519"
 )
 
 // PrivateKeyToCurve25519 converts an ed25519 private key into a corresponding

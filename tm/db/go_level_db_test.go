@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
 )
 
 func BenchmarkRandomReadsWrites(b *testing.B) {

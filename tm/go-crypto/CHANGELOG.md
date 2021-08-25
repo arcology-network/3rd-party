@@ -98,7 +98,7 @@ BREAKING CHANGES:
 
 FEATURES:
 
-- `github.com/arcology/Monaco/go-keys -> github.com/arcology/Monaco/go-crypto/keys` - command and lib for generating and managing encrypted keys
+- `github.com/HPISTechnologies/Monaco/go-keys -> github.com/HPISTechnologies/Monaco/go-crypto/keys` - command and lib for generating and managing encrypted keys
 - [hd] New function `WIFFromPrivKeyBytes(privKeyBytes []byte, compress bool) string`
 - Changes to `PrivKey`, `PubKey`, and `Signature` (denoted `Xxx` below):
   - Expose a new method `Unwrap() XxxInner` on the `Xxx` struct which returns the corresponding `XxxInner` interface

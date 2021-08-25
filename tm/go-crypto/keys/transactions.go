@@ -3,7 +3,7 @@ package keys
 import (
 	"sort"
 
-	crypto "github.com/arcology/3rd-party/tm/go-crypto"
+	crypto "github.com/HPISTechnologies/3rd-party/tm/go-crypto"
 )
 
 // Infos is a wrapper to allows alphabetical sorting of the keys

@@ -33,8 +33,8 @@ func TestReadByteSliceEquality(t *testing.T) {
 
 /* XXX
 // Issues:
-// + https://github.com/arcology/Monaco/go-wire/issues/25
-// + https://github.com/arcology/Monaco/go-wire/issues/37
+// + https://github.com/HPISTechnologies/Monaco/go-wire/issues/25
+// + https://github.com/HPISTechnologies/Monaco/go-wire/issues/37
 func TestFuzzBinaryLengthOverflowsCaught(t *testing.T) {
 	n, err := int(0), error(nil)
 	var x []byte

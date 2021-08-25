@@ -5,9 +5,9 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
-	"github.com/arcology/3rd-party/tm/ed25519"
-	"github.com/arcology/3rd-party/tm/ed25519/extra25519"
+	cmn "github.com/HPISTechnologies/3rd-party/tm/common"
+	"github.com/HPISTechnologies/3rd-party/tm/ed25519"
+	"github.com/HPISTechnologies/3rd-party/tm/ed25519/extra25519"
 	secp256k1 "github.com/btcsuite/btcd/btcec"
 	"golang.org/x/crypto/ripemd160"
 )

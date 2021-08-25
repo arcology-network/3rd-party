@@ -8,7 +8,7 @@ import (
 	"io"
 	"sync"
 
-	. "github.com/arcology/3rd-party/tm/common"
+	. "github.com/HPISTechnologies/3rd-party/tm/common"
 )
 
 var gRandInfo *randInfo

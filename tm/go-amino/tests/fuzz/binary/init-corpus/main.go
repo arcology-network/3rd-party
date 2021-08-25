@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/arcology/3rd-party/tm/go-amino"
-	"github.com/arcology/3rd-party/tm/go-amino/tests"
+	"github.com/HPISTechnologies/3rd-party/tm/go-amino"
+	"github.com/HPISTechnologies/3rd-party/tm/go-amino/tests"
 )
 
 func main() {

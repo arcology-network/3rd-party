@@ -1,7 +1,7 @@
 package crypto
 
 import (
-	amino "github.com/arcology/3rd-party/tm/go-amino"
+	amino "github.com/HPISTechnologies/3rd-party/tm/go-amino"
 )
 
 var cdc = amino.NewCodec()
