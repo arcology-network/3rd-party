@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	dbm "github.com/arcology/3rd-party/tm/db"
-	crypto "github.com/arcology/3rd-party/tm/go-crypto"
-	"github.com/arcology/3rd-party/tm/go-crypto/keys/words"
+	dbm "github.com/arcology-network/3rd-party/tm/db"
+	crypto "github.com/arcology-network/3rd-party/tm/go-crypto"
+	"github.com/arcology-network/3rd-party/tm/go-crypto/keys/words"
 	"github.com/pkg/errors"
 )
 

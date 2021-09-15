@@ -1,7 +1,7 @@
 package keys
 
 import (
-	crypto "github.com/arcology/3rd-party/tm/go-crypto"
+	crypto "github.com/arcology-network/3rd-party/tm/go-crypto"
 )
 
 // Keybase allows simple CRUD on a keystore, as an aid to signing

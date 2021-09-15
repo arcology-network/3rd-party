@@ -1,4 +1,4 @@
-module github.com/arcology/3rd-party
+module github.com/arcology-network/3rd-party
 
 go 1.13
 

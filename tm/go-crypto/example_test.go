@@ -17,7 +17,7 @@ package crypto_test
 import (
 	"fmt"
 
-	"github.com/arcology/3rd-party/tm/go-crypto"
+	"github.com/arcology-network/3rd-party/tm/go-crypto"
 )
 
 func ExampleSha256() {

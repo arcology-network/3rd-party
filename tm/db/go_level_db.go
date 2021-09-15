@@ -10,7 +10,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/arcology-network/3rd-party/tm/common"
 )
 
 func init() {

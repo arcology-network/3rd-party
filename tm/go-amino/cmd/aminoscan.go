@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
-	"github.com/arcology/3rd-party/tm/go-amino"
+	cmn "github.com/arcology-network/3rd-party/tm/common"
+	"github.com/arcology-network/3rd-party/tm/go-amino"
 )
 
 func main() {

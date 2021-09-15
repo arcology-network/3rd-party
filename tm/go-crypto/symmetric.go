@@ -3,7 +3,7 @@ package crypto
 import (
 	"errors"
 
-	. "github.com/arcology/3rd-party/tm/common"
+	. "github.com/arcology-network/3rd-party/tm/common"
 	"golang.org/x/crypto/nacl/secretbox"
 )
 

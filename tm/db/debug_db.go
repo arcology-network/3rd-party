@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/arcology-network/3rd-party/tm/common"
 )
 
 func _fmt(f string, az ...interface{}) string {

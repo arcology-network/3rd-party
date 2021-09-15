@@ -20,7 +20,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology-network/3rd-party/eth/common"
 )
 
 /*

@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/arcology/3rd-party/tm/go-crypto/keys/words/wordlist"
+	"github.com/arcology-network/3rd-party/tm/go-crypto/keys/words/wordlist"
 )
 
 const BankSize = 2048

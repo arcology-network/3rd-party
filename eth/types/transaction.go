@@ -23,10 +23,10 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"github.com/arcology/3rd-party/eth/common"
-	"github.com/arcology/3rd-party/eth/common/hexutil"
-	"github.com/arcology/3rd-party/eth/crypto"
-	"github.com/arcology/3rd-party/eth/rlp"
+	"github.com/arcology-network/3rd-party/eth/common"
+	"github.com/arcology-network/3rd-party/eth/common/hexutil"
+	"github.com/arcology-network/3rd-party/eth/crypto"
+	"github.com/arcology-network/3rd-party/eth/rlp"
 )
 
 //go:generate gencodec -type txdata -field-override txdataMarshaling -out gen_tx_json.go

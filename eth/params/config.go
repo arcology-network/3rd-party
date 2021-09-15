@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/arcology/3rd-party/eth/common"
+	"github.com/arcology-network/3rd-party/eth/common"
 )
 
 // Genesis hashes to enforce below configs on.

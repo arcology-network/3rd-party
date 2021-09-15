@@ -7,8 +7,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/arcology/3rd-party/eth/common"
-	"github.com/arcology/3rd-party/eth/common/hexutil"
+	"github.com/arcology-network/3rd-party/eth/common"
+	"github.com/arcology-network/3rd-party/eth/common/hexutil"
 )
 
 var _ = (*txdataMarshaling)(nil)

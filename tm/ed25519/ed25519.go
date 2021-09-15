@@ -14,7 +14,7 @@ import (
 	"crypto/subtle"
 	"io"
 
-	"github.com/arcology/3rd-party/tm/ed25519/edwards25519"
+	"github.com/arcology-network/3rd-party/tm/ed25519/edwards25519"
 )
 
 const (

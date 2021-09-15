@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/arcology-network/3rd-party/tm/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

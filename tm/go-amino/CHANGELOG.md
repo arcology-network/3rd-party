@@ -101,7 +101,7 @@ BUG FIXES:
 
 FEATURES:
 
-- `github.com/arcology/Monaco/go-data` -> `github.com/arcology/Monaco/go-wire/data`
+- `github.com/arcology-network/Monaco/go-data` -> `github.com/arcology-network/Monaco/go-wire/data`
 
 IMPROVEMENTS:
 

@@ -5,8 +5,8 @@ jobs:
       # specify the version
       - image: circleci/golang:1.13
 
-    working_directory: /go/src/github.com/arcology/3rd-party
+    working_directory: /go/src/github.com/arcology-network/3rd-party
     steps:
       - checkout
-      - run: go env -w GOPRIVATE=github.com/arcology
+      - run: go env -w GOPRIVATE=github.com/arcology-network
       - run: go build ./...

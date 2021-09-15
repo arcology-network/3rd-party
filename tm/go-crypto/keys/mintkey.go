@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	cmn "github.com/arcology/3rd-party/tm/common"
+	cmn "github.com/arcology-network/3rd-party/tm/common"
 
-	"github.com/arcology/3rd-party/tm/go-crypto"
-	"github.com/arcology/3rd-party/tm/go-crypto/keys/bcrypt"
+	"github.com/arcology-network/3rd-party/tm/go-crypto"
+	"github.com/arcology-network/3rd-party/tm/go-crypto/keys/bcrypt"
 )
 
 const (

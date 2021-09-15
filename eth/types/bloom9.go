@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/arcology/3rd-party/eth/common/hexutil"
-	"github.com/arcology/3rd-party/eth/crypto"
+	"github.com/arcology-network/3rd-party/eth/common/hexutil"
+	"github.com/arcology-network/3rd-party/eth/crypto"
 )
 
 type bytesBacked interface {
