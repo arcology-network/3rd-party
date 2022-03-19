@@ -20,6 +20,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"math/big"
 	"unsafe"
 
 	"github.com/arcology-network/3rd-party/eth/common"
@@ -45,6 +46,7 @@ const (
 // Receipt represents the results of a transaction.
 type Receipt struct {
 	// Consensus fields
+	Type              uint8  `json:"type,omitempty"`
 	PostState         []byte `json:"root"`
 	Status            uint64 `json:"status"`
 	CumulativeGasUsed uint64 `json:"cumulativeGasUsed" gencodec:"required"`
@@ -56,6 +58,12 @@ type Receipt struct {
 	ContractAddress common.Address `json:"contractAddress"`
 	GasUsed         uint64         `json:"gasUsed" gencodec:"required"`
 	SpawnedTxHash   common.Hash    `json:"spawned transactionHash"`
+
+	// Inclusion information: These fields provide information about the inclusion of the
+	// transaction corresponding to this receipt.
+	BlockHash        common.Hash `json:"blockHash,omitempty"`
+	BlockNumber      *big.Int    `json:"blockNumber,omitempty"`
+	TransactionIndex uint        `json:"transactionIndex"`
 }
 
 type receiptMarshaling struct {
@@ -67,6 +75,7 @@ type receiptMarshaling struct {
 
 // receiptRLP is the consensus encoding of a receipt.
 type receiptRLP struct {
+	Type              uint8
 	PostStateOrStatus []byte
 	CumulativeGasUsed uint64
 	Bloom             Bloom
@@ -76,6 +85,10 @@ type receiptRLP struct {
 	ContractAddress common.Address
 	GasUsed         uint64
 	SpawnedTxHash   common.Hash
+
+	BlockHash        common.Hash
+	BlockNumber      *big.Int
+	TransactionIndex uint
 }
 
 type receiptStorageRLP struct {
@@ -103,7 +116,7 @@ func NewReceipt(root []byte, failed bool, cumulativeGasUsed uint64) *Receipt {
 // EncodeRLP implements rlp.Encoder, and flattens the consensus fields of a receipt
 // into an RLP stream. If no post state is present, byzantium fork is assumed.
 func (r *Receipt) EncodeRLP(w io.Writer) error {
-	return rlp.Encode(w, &receiptRLP{r.statusEncoding(), r.CumulativeGasUsed, r.Bloom, r.Logs, r.TxHash, r.ContractAddress, r.GasUsed, r.SpawnedTxHash})
+	return rlp.Encode(w, &receiptRLP{r.Type, r.statusEncoding(), r.CumulativeGasUsed, r.Bloom, r.Logs, r.TxHash, r.ContractAddress, r.GasUsed, r.SpawnedTxHash, r.BlockHash, r.BlockNumber, r.TransactionIndex})
 }
 
 // DecodeRLP implements rlp.Decoder, and loads the consensus fields of a receipt
@@ -116,7 +129,7 @@ func (r *Receipt) DecodeRLP(s *rlp.Stream) error {
 	if err := r.setStatus(dec.PostStateOrStatus); err != nil {
 		return err
 	}
-	r.CumulativeGasUsed, r.Bloom, r.Logs, r.TxHash, r.ContractAddress, r.GasUsed, r.SpawnedTxHash = dec.CumulativeGasUsed, dec.Bloom, dec.Logs, dec.TxHash, dec.ContractAddress, dec.GasUsed, dec.SpawnedTxHash
+	r.Type, r.CumulativeGasUsed, r.Bloom, r.Logs, r.TxHash, r.ContractAddress, r.GasUsed, r.SpawnedTxHash, r.BlockHash, r.BlockNumber, r.TransactionIndex = dec.Type, dec.CumulativeGasUsed, dec.Bloom, dec.Logs, dec.TxHash, dec.ContractAddress, dec.GasUsed, dec.SpawnedTxHash, dec.BlockHash, dec.BlockNumber, dec.TransactionIndex
 	return nil
 }
 
