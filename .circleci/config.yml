@@ -3,10 +3,11 @@ jobs:
   build:
     docker:
       # specify the version
-      - image: circleci/golang:1.13
+      - image: cimg/go:1.19.0
 
-    working_directory: /go/src/github.com/arcology-network/3rd-party
+    #working_directory: /go/src/github.com/arcology-network/3rd-party
     steps:
       - checkout
       - run: go env -w GOPRIVATE=github.com/arcology-network
+      #- run: go mod tidy
       - run: go build ./...

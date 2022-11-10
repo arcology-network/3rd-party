@@ -460,12 +460,12 @@ func TxHash(data []byte) (h Hash) {
 
 type Addresses []Address
 
-//Len()
+// Len()
 func (as Addresses) Len() int {
 	return len(as)
 }
 
-//Less():
+// Less():
 func (as Addresses) Less(i, j int) bool {
 	ibys := as[i].Bytes()
 	jbys := as[j].Bytes()
@@ -480,7 +480,7 @@ func (as Addresses) Less(i, j int) bool {
 	return true
 }
 
-//Swap()
+// Swap()
 func (as Addresses) Swap(i, j int) {
 	as[i], as[j] = as[j], as[i]
 }

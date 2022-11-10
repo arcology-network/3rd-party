@@ -1,3 +1,4 @@
+//go:build gcc
 // +build gcc
 
 package db

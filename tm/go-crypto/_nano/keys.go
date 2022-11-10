@@ -12,7 +12,7 @@ import (
 	crypto "github.com/arcology-network/3rd-party/tm/go-crypto"
 )
 
-//nolint
+// nolint
 const (
 	NameLedgerEd25519 = "ledger-ed25519"
 	TypeLedgerEd25519 = 0x10
